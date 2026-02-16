@@ -11,8 +11,8 @@ class KiddyFrameMindView extends GetView<KiddyFrameMindLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.lxigmoj.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.jfap.value
+              ? const CircularProgressIndicator(color: Colors.orangeAccent)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class KiddyFrameMindView extends GetView<KiddyFrameMindLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.kzpfvl();
+              controller.dbxjwyh();
             },
             icon: const Icon(
               Icons.restart_alt,

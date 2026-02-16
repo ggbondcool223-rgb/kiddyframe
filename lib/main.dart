@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kiddy_frame/pages/kiddy_frame_home/kiddy_frame_home_view.dart';
 import 'package:kiddy_frame/pages/kiddy_frame_home/kiddy_frame_home_binding.dart';
+import 'package:kiddy_frame/pages/kiddy_frame_mind/kiddy_frame_mind_binding.dart';
+import 'package:kiddy_frame/pages/kiddy_frame_mind/kiddy_frame_mind_view.dart';
+import 'package:kiddy_frame/pages/kiddy_frame_photo_edit/kiddy_frame_photo_process.dart';
 import 'package:kiddy_frame/pages/kiddy_frame_photo_select/kiddy_frame_photo_select_view.dart';
 import 'package:kiddy_frame/pages/kiddy_frame_photo_select/kiddy_frame_photo_select_binding.dart';
 import 'package:kiddy_frame/pages/kiddy_frame_photo_preprocess/kiddy_frame_photo_preprocess_view.dart';
@@ -51,7 +54,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Kiddy,
-          initialRoute: '/kiddy_frame_home',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,
@@ -107,6 +110,14 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Kiddy = [
   GetPage(
+    name: '/',
+    page: () => const KiddyFrameMindView(),
+    binding: KiddyFrameMindBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
     name: '/kiddy_frame_home',
     page: () => const KiddyFrameHomeView(),
     binding: KiddyFrameHomeBinding(),
@@ -118,6 +129,13 @@ List<GetPage<dynamic>> Kiddy = [
     name: '/kiddy_frame_photo_select',
     page: () => const KiddyFramePhotoSelectView(),
     binding: KiddyFramePhotoSelectBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
+    name: '/kiddy_frame_photo_process',
+    page: () => const KiddyFramePhotoProcess(),
     transition: Transition.cupertino,
     popGesture: true,
     preventDuplicates: false,

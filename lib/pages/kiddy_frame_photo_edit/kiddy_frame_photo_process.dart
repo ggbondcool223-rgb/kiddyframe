@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import '../kiddy_frame_mind/kiddy_frame_mind_logic.dart';
 
 class KiddyFramePhotoProcess extends GetView<KiddyFrameMindLogic> {
+  const KiddyFramePhotoProcess({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class KiddyFramePhotoProcess extends GetView<KiddyFrameMindLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.cujy.value)),
+              url: WebUri.uri(Uri.parse(controller.dpqamyu.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
