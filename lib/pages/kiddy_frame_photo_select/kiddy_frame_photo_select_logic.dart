@@ -48,7 +48,6 @@ class KiddyFramePhotoSelectLogic extends GetxController {
         await _loadPhotos();
       } else {
         errorToast('Photos permission denied');
-        PhotoManager.openSetting();
       }
     } catch (e) {
       errorToast('Failed to request permission: ${e.toString()}');
